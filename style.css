@@ -4,3 +4,42 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+    background: linear-gradient(rgb(151, 204, 247), white);
+    height: 100vh;
+}
+
+.UpperContainer {
+    background: rgba(35, 46, 35, 0.342);
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    height: 320px;
+    width: 100%;
+}
+
+.UpperContainer .temperatureBox {
+    /* margin: 65px; */
+    min-height: 300px;
+    border: 2px solid black;
+    min-width: 100px;
+}
+
+.UpperContainer .inputFieldBox {
+    min-height: 300px;
+    border: 2px solid black;
+    min-width: 100px;
+}
+
+.inputField {
+    height: 35px;
+    min-width: 200px;
+    border-radius: 10px;
+    /* margin: 65px; */
+    border-color: gray;
+    border-width: 1px;
+    /* position: relative;
+    left: 650px;
+    top: 50px; */
+}
