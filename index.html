@@ -7,14 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="UpperContainer">
-        <div class="temperatureBox"><h1>temperature icon and text</h1></div>
-        <div class="inputFieldBox">
-            <input class="inputField" type="text" placeholder="Enter City name">
+    <div class="page-wrapper">
+        <div class="UpperContainer">
+            <div class="temperatureBox">
+                <img src="Img/rain.png" class="weather-icon" alt="">
+                <h1 class="temp">24°C</h1>
+                <h2 class="city">Madrid</h2>
+                
+            </div>
+            <div class="inputFieldBox">
+                <input class="inputField" type="text" placeholder="Enter City name">
+                <button><img src="Img/search.png" alt=""></button>
+            </div>
         </div>
-    </div>
-    <div>
-        <div class="card"></div>
+        <div class="BottomContainer">
+            <div class="card"></div>
+            <div class="details">
+                <div class="col">
+                    <img src="Img/humidity.png" alt="">
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
+                </div>
+                <div class="col">
+                    <img src="Img/wind.png" alt="">
+                        <div>
+                            <p class="wind">15k m/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="main.js"></script>
