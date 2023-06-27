@@ -5,9 +5,15 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/*------------------TOP CONTAINER DESIGN ----------------*/
+
+
 body {
     background: linear-gradient(rgb(151, 204, 247), white);
     height: 100vh;
+    min-width: 290px;
+
 }
 
 .page-wrapper {
@@ -25,6 +31,7 @@ body {
     height: 100%;
     width: 100%;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 .UpperContainer .temperatureBox {
@@ -45,7 +52,9 @@ body {
     align-items: flex-start;
     /* margin: 50px; */
     padding-top: 50px;
+    padding-bottom: 35px;
     flex-shrink: 0;
+    
 }
 
 .UpperContainer button {
@@ -77,13 +86,75 @@ body {
     border-width: 1px;
 }
 
+@media(max-width: 473px) {
+    .UpperContainer .inputFieldBox {
+        order: 1
+    }
+    .UpperContainer .temperatureBox {
+        order: 2;
+    }
+}
+
 .weather-icon {
     width: 170px;
-    margin-top: 30px;
+    margin-top: 18px;
 }
+
+
+.temp {
+    font-size: 50px;
+    /* font: 700; */
+    color: aliceblue;
+}
+
+.city {
+    font-size: 30px;
+    /* font: 300; */
+    color: aliceblue;
+}
+
+/* ----------   BOTTOM CONTAINER DESIGN -----------------*/
+
 
 .BottomContainer {
     position: relative;
     height: 100%;
-    background: yellow;
+    background: rgb(146, 146, 146);
+    display: flex;
+    justify-content: space-around;
+    /* height: 320px; */
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 60px;
+}
+
+
+.col {
+    /* border: 2px solid black; */
+    max-width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.col img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.col p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+    color: aliceblue;
+    white-space: nowrap;
+}
+
+.col .weather-text {
+    font-size: 30px;
+    margin-bottom: 10px;
 }
