@@ -9,11 +9,17 @@
 /*------------------TOP CONTAINER DESIGN ----------------*/
 
 
+
 body {
     background: linear-gradient(rgb(151, 204, 247), white);
     height: 100vh;
     min-width: 290px;
 
+}
+
+video{
+    position:absolute;
+    top:0;
 }
 
 .page-wrapper {
@@ -42,6 +48,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 
 .UpperContainer .inputFieldBox {
@@ -54,6 +61,7 @@ body {
     padding-top: 50px;
     padding-bottom: 35px;
     flex-shrink: 0;
+    z-index: 1;
     
 }
 
@@ -75,6 +83,8 @@ body {
 
 
 .inputField {
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
     height: 50px;
     min-width: 150px;
     border-radius: 25px;
@@ -84,6 +94,10 @@ body {
     margin: 10px;
     /* border-color: gray; */
     border-width: 1px;
+}
+
+.inputField :hover {
+    opacity:1;
 }
 
 @media(max-width: 473px) {
@@ -100,6 +114,10 @@ body {
     margin-top: 18px;
 }
 
+.weather-condition {
+    font-size: 20px;
+    color: azure;
+}
 
 .temp {
     font-size: 50px;
@@ -154,7 +172,20 @@ body {
     white-space: nowrap;
 }
 
-.col .weather-text {
+.col .humidity-text {
     font-size: 30px;
     margin-bottom: 10px;
+}
+
+.col .wind-text {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.overlay{
+    position: absolute;
+    top:0;
+    background: linear-gradient(rgba(151, 204, 247, 0.281), rgba(255, 255, 255, 0.267));
+    width: 100%;
+    height: 100%;
 }
