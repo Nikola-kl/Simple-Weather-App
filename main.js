@@ -82,7 +82,7 @@ async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     data = await response.json();
 
-    console.log(data);
+    
 
     cityName.innerHTML = data.name;
     temp.innerHTML = Math.round(data.main.temp) + '°C';
@@ -197,7 +197,7 @@ function updateWeatherDisplay(matchResult) {
         weatherIcon.src = 'img/drizzle.png';
         video.src = 'videos/drizzle.mp4';
         }
-    } else if (weatherData.main == 'Mist') {
+    } else if (weatherData.main == 'Mist' || weatherData.main == 'Fog') {
         if (matchResult === 'small') {
             weatherIcon.src = 'img/mist.png';
             video.src = 'videos/mist9x16.mp4';
