@@ -19,10 +19,11 @@ let data;
 
 function handleScreenSizeChange() {
     const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
     const video = document.querySelector("video");
 
     console.log(data)
-    if (screenWidth < 890) {
+    if (screenWidth < screenHeight) {
         if(!data){
             video.src = "videos/clear9x16.mp4"
         }
