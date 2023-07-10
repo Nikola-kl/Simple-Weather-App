@@ -96,42 +96,8 @@ async function checkWeather(city) {
     const weatherData = data.weather[0];
     document.querySelector('.weather-condition').innerHTML = weatherData.description
 
-    // switch (weatherData.main) {
-    //     case 'Clouds':
-    //         weatherIcon.src = 'img/clouds.png';
-    //         video.src = 'videos/clouds.mp4';
-    //         break;
-    //     case 'Clear':
-    //         weatherIcon.src = 'img/clear.png';
-    //         video.src = 'videos/clear.mp4';
-    //         break;
-    //     case 'Drizzle':
-    //         weatherIcon.src = 'img/drizzle.png';
-    //         video.src = 'videos/drizzle.mp4';
-    //         break;
-    //     case 'Mist':
-    //         weatherIcon.src = 'img/mist.png';
-    //         video.src = 'videos/mist.mp4';
-    //         break;
-    //     case 'Rain':
-    //         weatherIcon.src = 'img/rain.png';
-    //         video.src = 'videos/rain.mp4';
-    //         break;
-    //     case 'Snow':
-    //         weatherIcon.src = 'img/snow.png';
-    //         video.src = 'videos/snow.mp4';
-    //         break;
-    //     case 'Thunderstorm':
-    //         weatherIcon.src = 'img/thunderstorm.png';
-    //         video.src = 'videos/thunderstorm.mp4';
-    //         break;
-    //     default:
-    //         weatherIcon.src = 'img/clear.png';
-    //         video.src = 'videos/clear.mp4';
-    // }
+    
 
-
-    // SAME FUNCTION BUT WRITTEN IN IF ELSE CHAIN 
     const screenSize = handleScreenSizeChange();
     updateWeatherDisplay(screenSize);
     return; 
@@ -173,6 +139,7 @@ function updateWeatherDisplay(matchResult) {
     const weatherData = data.weather[0];
     const weatherIcon = document.querySelector('.weather-icon')
     const video = document.querySelector("video");
+   showElements()
     
     if (weatherData.main == 'Clouds') {
         if (matchResult === 'small') {
@@ -231,6 +198,21 @@ function updateWeatherDisplay(matchResult) {
         video.src = 'videos/thunderstorm.mp4';
         }
     }
+
+    
+}
+
+function showElements() {
+    const bottomContainers = document.querySelectorAll(".BottomContainer .col");
+    const pageWrapperElements = document.querySelectorAll(".page-wrapper .UpperContainer .temperatureBox img");
+
+    bottomContainers.forEach(function(element) {
+        element.style.visibility = 'visible';
+    });
+
+    pageWrapperElements.forEach(function(element) {
+        element.style.visibility = 'visible';
+    });
 }
 
 window.addEventListener('resize', function () {
