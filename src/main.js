@@ -1,5 +1,5 @@
 
-const apiKey = "063f2b3b63046559077e687d61c0bad6";
+const apiKey = process.env.WEATHER_API_KEY;
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 const apiGeoCoord = "http://api.openweathermap.org/geo/1.0/reverse?limit=5";
 
@@ -12,7 +12,6 @@ const temp = document.querySelector('.temp');
 const wind = document.querySelector('.wind-text')
 const humidity = document.querySelector('.humidity-text')
 
-
 let data;
 
 // window.addEventListener('resize', handleScreenSizeChange);
@@ -22,7 +21,6 @@ function handleScreenSizeChange() {
     const screenHeight = window.innerHeight;
     const video = document.querySelector("video");
 
-    console.log(data)
     if (screenWidth < screenHeight) {
         if(!data){
             video.src = "videos/clear9x16.mp4"
